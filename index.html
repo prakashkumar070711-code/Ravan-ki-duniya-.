@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030303">
+
+<title>RAVAN KI DUNIYA V3.0</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #030303;
+    color: #00ff41;
+    font-family: monospace;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 12px;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 25px 10px;
+    border: 1px solid #00ff41;
+    background: #050805;
+    box-shadow: 0 0 15px #003b10;
+}
+
+.logo {
+    width: 145px;
+    height: 145px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 2px solid #00ff41;
+    box-shadow: 0 0 20px #00ff41;
+}
+
+header h1 {
+    color: #ff2020;
+    font-size: clamp(25px, 6vw, 43px);
+    margin-top: 18px;
+    text-shadow: 0 0 15px red;
+}
+
+header p {
+    margin-top: 12px;
+    color: #00ff41;
+    letter-spacing: 2px;
+}
+
+/* PHOTO SECTION */
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    margin-top: 18px;
+    overflow: hidden;
+    border: 1px solid #00ff41;
+    background: #050505;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    opacity: 0.75;
+}
+
+.hero-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 10px;
+    text-align: center;
+    background: linear-gradient(
+        transparent 25%,
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+.hero-text h2 {
+    color: #00ff41;
+    font-size: clamp(20px, 5vw, 32px);
+    text-shadow: 0 0 12px green;
+}
+
+.hero-text p {
+    color: white;
+    margin-top: 10px;
+}
+
+/* GENERAL PANELS */
+
+.panel {
+    margin-top: 18px;
+    padding: 18px;
+    border: 1px solid #00ff41;
+    background: rgba(0, 12, 3, 0.95);
+    box-shadow: 0 0 8px #003b10;
+}
+
+.panel h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #00ff41;
+}
+
+.logs {
+    line-height: 1.9;
+    overflow-wrap: anywhere;
+}
+
+.green {
+    color: #00ff41;
+}
+
+.red {
+    color: #ff3030;
+}
+
+/* MATRIX */
+
+#matrix {
+    display: block;
+    width: 100%;
+    height: 180px;
+    background: black;
+    border: 1px solid #005c19;
+}
+
+/* BUTTONS */
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+button {
+    width: 100%;
+    min-height: 65px;
+    padding: 12px 8px;
+    color: #00ff41;
+    background: #001506;
+    border: 1px solid #00ff41;
+    font-family: monospace;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover,
+button:focus {
+    color: black;
+    background: #00ff41;
+    box-shadow: 0 0 15px #00ff41;
+}
+
+/* OUTPUT */
+
+#output {
+    min-height: 100px;
+    padding: 12px;
+    background: #020402;
+    color: #00ff41;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    margin-top: 18px;
+    padding: 25px 10px;
+    border: 1px solid #17451e;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+footer h2 {
+    color: #ff2020;
+    font-size: clamp(20px, 5vw, 28px);
+    text-shadow: 0 0 10px red;
+    margin-bottom: 8px;
+}
+
+/* MOBILE */
+
+@media (max-width: 420px) {
+    .container {
+        padding: 7px;
+    }
+
+    .logo {
+        width: 115px;
+        height: 115px;
+    }
+
+    .hero {
+        height: 290px;
+    }
+
+    .panel {
+        padding: 12px;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <header>
+        <img
+            class="logo"
+            src="ravan.png"
+            alt="Ravan Ki Duniya Logo"
+        >
+
+        <h1>☠ RAVAN KI DUNIYA ☠</h1>
+
+        <p>THE DARK SIDE IS ONLINE</p>
+
+        <p>
+            USER: RAVAN |
+            MODE: DARK |
+            STATUS: ONLINE
+        </p>
+    </header>
+
+    <!-- YOUR PHOTO -->
+    <section class="hero">
+        <img
+            src="ravan.png"
+            alt="Ravan Dark Theme Background"
+        >
+
+        <div class="hero-text">
+            <h2>WELCOME TO RAVAN KI DUNIYA</h2>
+            <p>☠ RULE YOUR OWN WORLD ☠</p>
+        </div>
+    </section>
+
+    <!-- SYSTEM -->
+    <section class="panel">
+        <h2>» SYSTEM INITIALIZATION</h2>
+
+        <div class="logs">
+            <div>[+] Loading Ravan interface...</div>
+            <div>[+] Loading visual modules...</div>
+            <div>[+] Starting matrix animation...</div>
+            <div>[+] Checking website interface...</div>
+            <div class="green">[✓] SYSTEM READY.</div>
+        </div>
+    </section>
+
+    <!-- MATRIX ANIMATION -->
+    <section class="panel">
+        <h2>» MATRIX VISUALIZER</h2>
+        <canvas id="matrix"></canvas>
+    </section>
+
+    <!-- COMMAND CENTER -->
+    <section class="panel">
+        <h2>» COMMAND CENTER</h2>
+
+        <div class="buttons">
+            <button onclick="demoScan()">
+                01 / DEMO SCAN
+            </button>
+
+            <button onclick="whoAmI()">
+                02 / WHO AM I?
+            </button>
+
+            <button onclick="securityAlert()">
+                03 / SECURITY ALERT
+            </button>
+
+            <button onclick="secretMessage()">
+                04 / SECRET MESSAGE
+            </button>
+        </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section class="panel">
+        <h2>» TERMINAL OUTPUT</h2>
+
+        <div id="output" aria-live="polite">
+            ravan@dark:~$ Waiting for command...
+        </div>
+    </section>
+
+    <!-- NOTICE -->
+    <section class="panel">
+        <h2>» SYSTEM NOTICE</h2>
+
+        <p class="red">⚠ RAVAN KI DUNIYA</p>
+
+        <p style="color:#ccc; line-height:1.8; margin-top:10px;">
+            Welcome to the dark-themed visual experience.
+            <br>
+            This is a fictional interface.
+            <br>
+            No real devices are scanned or accessed.
+        </p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <h2>☠ RAVAN KI DUNIYA V3.0 ☠</h2>
+
+        <p>DARK THEME • MATRIX VISUALS</p>
+
+        <p>© 2026 RAVAN KI DUNIYA</p>
+    </footer>
+
+</div>
+
+<script>
+const output = document.getElementById("output");
+
+function showMessage(message) {
+    output.textContent = "";
+
+    const line = document.createElement("div");
+    line.textContent = "ravan@dark:~$ " + message;
+
+    output.appendChild(line);
+}
+
+function demoScan() {
+    showMessage("Starting visual demo...");
+
+    const line = document.createElement("div");
+    line.textContent = "[✓] Demo completed. No devices scanned.";
+
+    output.appendChild(line);
+}
+
+function whoAmI() {
+    showMessage("Welcome to RAVAN KI DUNIYA!");
+
+    const line = document.createElement("div");
+    line.textContent = "USER: RAVAN | MODE: DARK";
+
+    output.appendChild(line);
+}
+
+function securityAlert() {
+    showMessage("This is a visual security demonstration only.");
+}
+
+function secretMessage() {
+    showMessage("Keep learning. Keep creating. Stay curious!");
+}
+
+/* MATRIX EFFECT */
+
+const canvas = document.getElementById("matrix");
+const ctx = canvas.getContext("2d");
+
+const fontSize = 14;
+let drops = [];
+
+function resizeMatrix() {
+    const rect = canvas.getBoundingClientRect();
+    const dpr = window.devicePixelRatio || 1;
+
+    canvas.width = Math.floor(rect.width * dpr);
+    canvas.height = Math.floor(rect.height * dpr);
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    const columns = Math.floor(rect.width / fontSize);
+
+    drops = Array.from(
+        { length: columns },
+        () => Math.random() * -20
+    );
+}
+
+function drawMatrix() {
+    const width = canvas.clientWidth;
+    const height = canvas.clientHeight;
+
+    ctx.fillStyle = "rgba(0, 0, 0, 0.12)";
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.fillStyle = "#00ff41";
+    ctx.font = fontSize + "px monospace";
+
+    for (let i = 0; i < drops.length; i++) {
+        const character = Math.random() > 0.5 ? "1" : "0";
+
+        ctx.fillText(
+            character,
+            i * fontSize,
+            drops[i] * fontSize
+        );
+
+        if (
+            drops[i] * fontSize > height &&
+            Math.random() > 0.975
+        ) {
+            drops[i] = 0;
+        }
+
+        drops[i] += 0.7;
+    }
+}
+
+resizeMatrix();
+
+window.addEventListener("resize", resizeMatrix);
+
+setInterval(drawMatrix, 50);
+</script>
+
+</body>
+</html>
